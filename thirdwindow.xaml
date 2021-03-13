@@ -1,0 +1,82 @@
+﻿<Window x:Class="WpfFinal.thirdwindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfFinal"
+        mc:Ignorable="d"
+        Title="thirdwindow" Height="450" Width="800">
+    <Canvas>
+        <Label Name="hello" FontSize="30" FontWeight="Bold" Content="Hello" Canvas.Left="10" Canvas.Top="187">
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="hello"
+                                Storyboard.TargetProperty="(Canvas.Left)"
+                                From="10" To="279"
+                                Duration="0:0:4">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+
+        <Label Name="wpf" FontSize="30" FontWeight="Bold" Content="WPF" Canvas.Left="363" Canvas.Top="10">
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="wpf"
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                From="10" To="187"
+                                Duration="0:0:4"/>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+
+        <Label Name="world" FontSize="30" FontWeight="Bold" Content="World" Canvas.Left="693" Canvas.Top="187">
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="world"
+                                Storyboard.TargetProperty="(Canvas.Left)"
+                                From="693" To="435"
+                                Duration="0:0:4">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <Label Name="wow" Content="!" FontSize="30" FontWeight="Bold" Canvas.Left="530" Canvas.Top="-50
+               " RenderTransformOrigin="-1.551,0.528">
+            <Label.Triggers>
+                <EventTrigger RoutedEvent="Window.Loaded">
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation
+                                Storyboard.TargetName="wow"
+                                Storyboard.TargetProperty="(Canvas.Top)"
+                                From="-50" To="187"
+                                BeginTime="0:0:5"
+                                Duration="0:0:2">
+                            </DoubleAnimation>
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Label.Triggers>
+        </Label>
+        <Button Content="Window 1" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="firstWindow_Click" />
+        <Button Content="Window 2" HorizontalAlignment="Left" Margin="89,10,0,0" VerticalAlignment="Top" Click="secondWindow_Click" />
+
+    </Canvas>
+
+</Window>
